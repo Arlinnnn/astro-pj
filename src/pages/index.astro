@@ -9,6 +9,7 @@ const identidad = {
 };
 
 const habilidades = ["arts and humanities", "rhythmic gymnastics", "design", "cocina"];
+const habilidadColor = 'purple';
 ---
 
 <html lang="en">
@@ -23,7 +24,7 @@ const habilidades = ["arts and humanities", "rhythmic gymnastics", "design", "co
     <header>
       <h1>Hello world¿</h1>
 	    <nav>
-		    <a href="/About/">about...</a>
+		    <a href="/About/">About...</a>
 	  	  <a href="/posts/post01/">Blog..</a>
 	   </nav>
     </header>
@@ -43,17 +44,25 @@ const habilidades = ["arts and humanities", "rhythmic gymnastics", "design", "co
 		   </ol>
        <p>I studied ... and I have knowledge in</p>
         <ul>
-          <li>{habilidades[0]}</li>
-          <li>{habilidades[1]}</li>
-          <li>{habilidades[2]}</li>
+          {habilidades.map((habilidad) => <li class="habilidad">{habilidad}</li>)}
+          <!-- <li>{habilidades[1]}</li>
+          <li>{habilidades[2]}</li> -->
         </ul>
      </div>
     </main>
   </body>
 </html>
-<style styles.global>
+<style define:vars = {{habilidadColor}}>
 body{
 background-color: rgb(243, 222, 225);
+}
+.habilidad{
+  color:greenyellow;
+  color: var(--habilidadColor);
+  font-weight: 600;
+}
+h1, h2, h3, h4, p{
+  font-family: Arial, Helvetica, sans-serif;
 }
 a{
 text-decoration: none;
