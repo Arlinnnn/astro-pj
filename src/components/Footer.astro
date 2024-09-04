@@ -1,0 +1,35 @@
+---
+  interface Props {
+  url: string[];
+  rrss: string[];
+}
+
+const { url, rrss } = Astro.props;
+const enlacesColor = 'brown';
+---
+
+<div class="foot">
+    <ul>
+      <a class="afoot" href={url[0]} target="_blank">{rrss[0]}</a>
+      <a class="afoot" href={url[1]} target="_blank">{rrss[1]}</a>
+      <a class="afoot" href={url[2]} target="_blank">{rrss[2]}</a>
+   </ul>
+   <p> &copy; AE 2024 All rights Reserved.</p>
+</div>
+<style define:vars = {{enlacesColor}}>
+    .foot{
+       background-color: rgb(233, 222, 245);
+       text-align: center;
+       justify-content: space-around;
+       width:100%;
+       padding:0.1rem;
+    }
+.afoot {
+    color: var(--enlacesColor);
+}
+.afoot:hover{
+    color:rgb(0, 139, 185);
+    text-decoration: underline;
+    transition: 0.7ms ease-in;
+    }
+</style>

@@ -1,6 +1,7 @@
 ---
 import '/src/styles/main.css';
 import Navegacion from '../components/Navegacion.astro';
+import Footer from '../components/Footer.astro';
 
 const pagetitle = "Astro by Arlin";
 
@@ -13,6 +14,9 @@ const identidad = {
 
 const habilidades = ["arts and humanities", "rhythmic gymnastics", "design", "cocina"];
 const habilidadColor = 'purple';
+
+
+// const url = ['https://www.facebook.com', 'https://www.x.com', 'https://www.instagram.com'];
 ---
 
 <html lang="en">
@@ -52,9 +56,13 @@ const habilidadColor = 'purple';
         </ul>
      </div>
     </main>
+    <Footer
+      url={["https://www.facebook.com" ,  'https://www.x.com', 'https://www.instagram.com']}
+      rrss={["Facebook" , "Twitter", "Instagram"]}
+   />
   </body>
 </html>
-<style define:vars = {{habilidadColor}}>
+<style define:vars = {{habilidadColor}} >
     .habilidad{
       color:greenyellow;
       color: var(--habilidadColor);
