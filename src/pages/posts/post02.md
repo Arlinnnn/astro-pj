@@ -1,22 +1,32 @@
 # Ejercicios
 
-### 1. 
-Dado el siguiente código:
+### 01
 
+Dado el siguiente codigo:
 ```sh
 const sistemaOperativo = 'Linux';
-const cantidad : 4;
-const ropa : 'botas';
-const estudiar : false;
+const cantidad = 4;
+const ropa = 'botas';
+const estudiar = false;
 ```
 
-Indica/Escribe lo que sacaria el navegador en la web según las siguientes expresiones :
-**1.** <p>{sistemaOperativo}</p>
-**2.**  {estudiar &&<p> sigo estudiando</p>}
-**3.** <p> tengo {cantidad - 2} pares de {ropa}</p>
-**4.** {sistemaOperativo == "macOs" ? <p>Uso el ordenador de la manzanita</p> : <p> no se como manejar mi Os }</p>
+Escribe o trata de imitar lo que sacaria el navegador en la web segun las siguientes expresiones:
 
-**1.** <p>Linux</p>
-**2.** "" (no se muestra nada por estudiar es false)
-**3.** <p> tengo 2 pares de botas</p>
-**4.** <p> no se como manejar mi Os </p>
+**1.**<p>{sistemaOperativo}</p>
+
+    Linux
+
+**2.**{estudiar && <p>Sigo estudiando</p>}
+
+    ""
+
+**3.**<p>Tengo {cantidad - 2} pares de {ropa</p>}
+
+    Tengo 2 pares de botas
+
+**4.**{sistemaOperativo === "Macos" ? <p>Uso el ordenador de la manzanita</p> : <p>No se como manejar mi OS.</p>s }
+
+    No se como majejar mi OS.    
+
+
+

@@ -1,4 +1,7 @@
 ---
+import '/src/styles/main.css';
+import Navegacion from '../components/Navegacion.astro';
+
 const pagetitle = "Astro by Arlin";
 
 const identidad = {
@@ -23,10 +26,9 @@ const habilidadColor = 'purple';
   <body>
     <header>
       <h1>Hello world¿</h1>
-	    <nav>
-		    <a href="/About/">About...</a>
-	  	  <a href="/posts/post01/">Blog..</a>
-	   </nav>
+	    <Navegacion
+		   
+	   />
     </header>
     <main>
       <div>
@@ -53,24 +55,9 @@ const habilidadColor = 'purple';
   </body>
 </html>
 <style define:vars = {{habilidadColor}}>
-body{
-background-color: rgb(243, 222, 225);
-}
-.habilidad{
-  color:greenyellow;
-  color: var(--habilidadColor);
-  font-weight: 600;
-}
-h1, h2, h3, h4, p{
-  font-family: Arial, Helvetica, sans-serif;
-}
-a{
-text-decoration: none;
-color:blueviolet;
-}
-a:hover{
-color:rgb(0, 139, 185);
-text-decoration: underline;
-transition: 0.7ms ease-in;
-}
+    .habilidad{
+      color:greenyellow;
+      color: var(--habilidadColor);
+      font-weight: 600;
+    }
 </style>
