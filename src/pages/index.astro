@@ -1,18 +1,67 @@
 ---
+const pagetitle = "Astro by Arlin";
 
+const identidad = {
+  nombre: "Arlin",
+  apellido: "Espinal",
+  pais: "Dom. Rep. ",
+  hobbies: ["workout", "paint", "watch films", "comics"],
+};
+
+const habilidades = ["arts and humanities", "rhythmic gymnastics", "design", "cocina"];
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Hola Mundo¿</h1>
-		<a href="/about/">about...</a>
-		<a href="/posts/post01/">Blog...</a>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pagetitle}</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hello world¿</h1>
+	    <nav>
+		    <a href="/About/">about...</a>
+	  	  <a href="/posts/post01/">Blog..</a>
+	   </nav>
+    </header>
+    <main>
+      <div>
+		   <h2>Presentation</h2>
+        <ul>
+           <li>My name is {identidad.nombre}</li>
+		       <li>I am from {identidad.pais}</li>
+        </ul>
+        <p>My favorite hobbies are:</p>
+       <ol>
+          <li>{identidad.hobbies[0]}</li>
+          <li>{identidad.hobbies[1]}</li>
+          <li>{identidad.hobbies[2]}</li>
+          <li>{identidad.hobbies[3]}</li>
+		   </ol>
+       <p>I studied ... and I have knowledge in</p>
+        <ul>
+          <li>{habilidades[0]}</li>
+          <li>{habilidades[1]}</li>
+          <li>{habilidades[2]}</li>
+        </ul>
+     </div>
+    </main>
+  </body>
 </html>
+<style styles.global>
+body{
+background-color: rgb(243, 222, 225);
+}
+a{
+text-decoration: none;
+color:blueviolet;
+}
+a:hover{
+color:rgb(0, 139, 185);
+text-decoration: underline;
+transition: 0.7ms ease-in;
+}
+</style>
