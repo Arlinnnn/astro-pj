@@ -1,32 +1,24 @@
 ---
-import '/src/styles/main.css';
-import Navegacion from '../components/Navegacion.astro';
-import Footer from '../components/Footer.astro';
-
-const pagetitle = "Astro by Arlin";
-
+import Layout from '../Layouts/Layout.astro';
+import IslaInteractiva from '../components/IslaInteractiva.jsx';
+const islas = [
+  { titulo: 'Arts and Humanities', icono: '/arts.png', descripcion: 'Explora disciplinas como historia, filosofía y arte.' },
+  { titulo: 'Rhythmic Gymnastics', icono: '/gymnastics.png', descripcion: 'Una combinación de danza y gimnasia con movimientos fluidos.' },
+  { titulo: 'Design', icono: '/design.png', descripcion: 'Diseño gráfico, industrial y de moda.' },
+  { titulo: 'Cooking', icono: '/cooking.png', descripcion: 'Recetas y técnicas culinarias para todos los gustos.' },
+];
 const identidad = {
   nombre: "Arlin",
   apellido: "Espinal",
   pais: "Dom. Rep. ",
   hobbies: ["workout", "paint", "watch films", "comics"],
 };
-const enlace = [['about', 'About'], ['posts/post01', '1st Post'], ['posts/post02', '2nd Post']];
+
 const habilidades = ["arts and humanities", "rhythmic gymnastics", "design", "cocina"];
 const habilidadColor = 'purple';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pagetitle}</title>
-  </head>
-  <body>
-    <Navegacion 
-    titulo="HOME"enlace={enlace}/>
+<Layout>
     <main>
       <div>
 		   <h2>Presentation</h2>
@@ -41,29 +33,41 @@ const habilidadColor = 'purple';
           <li>{identidad.hobbies[2]}</li>
           <li>{identidad.hobbies[3]}</li>
 		   </ol>
-       <p>I studied ... and I have knowledge in</p>
-        <ul>
-          {habilidades.map((habilidad) => <li class="habilidad">{habilidad}</li>)}
+       <p>I studied ... and I have knowledge in:</p>
+       <div class="islas-container">
+        {islas.map((isla) => (
+          <IslaInteractiva 
+            icono={isla.icono} 
+            titulo={isla.titulo} 
+            descripcion={isla.descripcion} 
+            client:load 
+          />
+        ))}
+       </div>
+        <!-- <ul>
+          {habilidades.map((habilidad) => <li class="habilidad">{habilidad}</li>)} -->
           <!-- <li>{habilidades[1]}</li>
           <li>{habilidades[2]}</li> -->
-        </ul>
+        <!-- </ul> -->
      </div>
     </main>
-    <Footer
-      url={["https://www.facebook.com" ,  'https://www.x.com', 'https://www.instagram.com']}
-      rrss={["Facebook" , "Twitter", "Instagram"]}
-   />
-  </body>
-  <script>
-    document.querySelector('.hamburguesa').addEventListener('click',() =>{
-      document.querySelector('.nav-links').classList.toggle('expanded');
-    });
-  </script>
-</html>
+   
+  
+  </Layout> 
+
+
 <style define:vars = {{habilidadColor}} >
     .habilidad{
       color:greenyellow;
       color: var(--habilidadColor);
       font-weight: 600;
     }
+
+
+  .islas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
 </style>

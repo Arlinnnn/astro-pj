@@ -1,17 +1,14 @@
 ---
+import Layout from '../Layouts/Layout.astro';
 import '/src/styles/main.css';
+const pagetitle = "About Arlin";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Acerca De Astro</title>
-	</head>
-	<body>
-		<h1>Acerca de Astro</h1>
-        <a href="/">inicio</a>
-	</body>
-</html>
+<title>{pagetitle}</title>
+<Layout>
+	<a href="/">← Go back? ..</a>
+	<h2>
+		Lorem, ipsum dolor.
+	</h2>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nostrum dolore consequatur corrupti magnam dolor ad nihil magni temporibus in.</p>
+	<img src="/icon.png" alt="img" title="img">
+</Layout>

@@ -1,0 +1,32 @@
+---
+const pagetitle = "Astro by Arlin";
+import Navegacion from '../components/Navegacion.astro';
+const enlace = [['about', 'About'], ['posts/post01', '1st Post'], ['posts/post02', '2nd Post']];
+import '/src/styles/main.css';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pagetitle}</title>
+  </head>
+  <body>
+    
+    <Navegacion 
+    titulo="HOME"enlace={enlace}/>
+    <slot/>
+    <Footer
+    url={["https://www.facebook.com" ,  'https://www.x.com', 'https://www.instagram.com']}
+    rrss={["Facebook" , "Twitter", "Instagram"]}
+ />
+  </body>
+  <script>
+    document.querySelector('.hamburguesa').addEventListener('click',() =>{
+      document.querySelector('.nav-links').classList.toggle('expanded');
+    });
+  </script>
+</html>

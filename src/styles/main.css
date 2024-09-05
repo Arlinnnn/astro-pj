@@ -5,9 +5,9 @@ html {
   }
   
   body {margin:0;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     width: 100%;
-    max-width: 80ch;
+    /* max-width: 80ch; */
     padding: 1rem;
     line-height: 1.5;
   }
@@ -36,6 +36,9 @@ html {
     
      margin-left: 0;
      padding-left: 0;
+    }
+    img{
+      width: 300px;
     }
     a:hover{
     color:rgb(0, 139, 185);
@@ -80,6 +83,23 @@ html {
   }
   .expanded{
     display: unset;
+  }
+  .isla {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .isla-hovered {
+    transform: scale(1.05);
+  }
+  
+  .isla-icono {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
   }
   
   @media screen and (min-width:636px){
