@@ -24,11 +24,7 @@ html {
     background-color: rgb(243, 222, 225);
     padding:10px;
     }  
-header{
-  background-color: rgb(237, 234, 240);
-  text-align: center;
-  border-bottom: dashed blueviolet 2px;
-}
+
      h2, h3, h4, p{
       font-family: Arial, Helvetica, sans-serif;
     } 
@@ -37,7 +33,7 @@ header{
     color:blueviolet;
     margin:0 20px 0 20px;
   padding: 0 10px 0 10px;
-    border-right: solid blueviolet 2px ; 
+    
      margin-left: 0;
      padding-left: 0;
     }
@@ -46,3 +42,60 @@ header{
     text-decoration: underline;
     transition: 0.7ms ease-in;
     }
+
+    .hamburguesa{
+      padding-right:20px;
+      cursor:pointer;
+  }
+  .hamburguesa .linea{
+      display:block;
+      width:40px;
+      height:5px;
+      margin-bottom:10px;
+      background-color: rgb(240, 217, 217);
+  
+  }
+  
+    .nav-links{
+      width:100%;
+      top: 5rem;
+      left: 48px;
+      background-color: rgb(190, 190, 190);
+      display:none;
+      margin:0 ;
+  }
+  .nav-links a{
+      display:block;
+      text-align: center;
+      padding:10px 0;
+      text-decoration:none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus{
+    text-decoration: underline;
+      background-color: #f9e8e8;
+  }
+  .expanded{
+    display: unset;
+  }
+  
+  @media screen and (min-width:636px){
+      .nav-links{
+          margin-left:5em;
+          display:block;
+          position:static;
+          width:auto;
+          background: none;
+      }
+      .nav-links a{
+          display:inline-block;
+          padding: 15px 20px;
+      }
+      .hamburguesa{
+        display:none;
+      }
+  
+  }

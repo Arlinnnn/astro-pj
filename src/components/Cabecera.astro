@@ -1,0 +1,29 @@
+---
+import Navegacion from "./Navegacion.astro";
+
+const enlace = [['about', 'About'], ['posts/post01', '1st Post'], ['posts/post02', '2nd Post']];
+---
+
+<div class="nav">
+    <img src="/icon.png">
+      <Navegacion
+    enlace={enlace}
+    />
+    </div>
+
+    <style>
+
+img{
+        width: 80px;
+        margin-right: 20px ;
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       
+  background-color: rgb(237, 234, 240);
+  text-align: center;
+  border-bottom: dashed blueviolet 2px;
+    }
+    </style>

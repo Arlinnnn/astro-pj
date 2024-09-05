@@ -11,12 +11,9 @@ const identidad = {
   pais: "Dom. Rep. ",
   hobbies: ["workout", "paint", "watch films", "comics"],
 };
-
+const enlace = [['about', 'About'], ['posts/post01', '1st Post'], ['posts/post02', '2nd Post']];
 const habilidades = ["arts and humanities", "rhythmic gymnastics", "design", "cocina"];
 const habilidadColor = 'purple';
-
-
-// const url = ['https://www.facebook.com', 'https://www.x.com', 'https://www.instagram.com'];
 ---
 
 <html lang="en">
@@ -28,12 +25,8 @@ const habilidadColor = 'purple';
     <title>{pagetitle}</title>
   </head>
   <body>
-    <header>
-      <h1>Hello world¿</h1>
-	    <Navegacion
-		   
-	   />
-    </header>
+    <Navegacion 
+    titulo="HOME"enlace={enlace}/>
     <main>
       <div>
 		   <h2>Presentation</h2>
@@ -61,6 +54,11 @@ const habilidadColor = 'purple';
       rrss={["Facebook" , "Twitter", "Instagram"]}
    />
   </body>
+  <script>
+    document.querySelector('.hamburguesa').addEventListener('click',() =>{
+      document.querySelector('.nav-links').classList.toggle('expanded');
+    });
+  </script>
 </html>
 <style define:vars = {{habilidadColor}} >
     .habilidad{
