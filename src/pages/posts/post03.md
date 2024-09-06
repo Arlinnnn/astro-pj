@@ -1,3 +1,15 @@
+---
+Layout: ../../Layouts/MDPostLayout.astro
+title: "Ejercicios 02"
+pubDate: 2024-04-09
+description: "Ejercicios realizados el 4/9/24"
+author: "Arlin"
+image: 
+ url: ""
+ alt: "Mi logotipo"
+tags: ["astro", "visual studio code", "web development"]
+---
+[Go back ? ..](../../)
 ## Ejercicios.
 
 ### 01

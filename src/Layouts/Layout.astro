@@ -1,7 +1,7 @@
 ---
 const pagetitle = "Astro by Arlin";
 import Navegacion from '../components/Navegacion.astro';
-const enlace = [['about', 'About'], ['posts/post01', '1st Post'], ['posts/post02', '2nd Post']];
+const enlace = [['about', 'About'], ['posts/post01', '1st Post'], ['posts/post02', '2nd Post'], ['posts/post03', '3rd Post'],['tags/astro', 'Tags']];
 import '/src/styles/main.css';
 import Footer from '../components/Footer.astro';
 ---
@@ -17,7 +17,9 @@ import Footer from '../components/Footer.astro';
   <body>
     
     <Navegacion 
-    titulo="HOME"enlace={enlace}/>
+    titulo="HOME"
+    enlace={enlace}
+    />
     <slot/>
     <Footer
     url={["https://www.facebook.com" ,  'https://www.x.com', 'https://www.instagram.com']}

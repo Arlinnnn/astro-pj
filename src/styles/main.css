@@ -76,6 +76,9 @@ html {
       font-weight: bold;
       text-transform: uppercase;
   }
+  /* nav:hover{
+    background-color: #f9e8e8;
+  } */
   .nav-links a:hover,
   .nav-links a:focus{
     text-decoration: underline;
@@ -83,6 +86,7 @@ html {
   }
   .expanded{
     display: unset;
+    
   }
   .isla {
     padding: 20px;

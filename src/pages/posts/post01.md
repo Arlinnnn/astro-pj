@@ -1,4 +1,5 @@
 ---
+Layout: ../../Layouts/MDPostLayout.astro
 title: "mi primer post con MarkDown"
 pubDate: 2024-03-09
 description: "Esta es la primera publicación de mi página con Astro"
@@ -6,8 +7,10 @@ author: "Arlin"
 image: 
  url: ""
  alt: "Mi logotipo"
-tags: ["astro", "visual studio code", "web development"]
+tags: ["astro", "visual studio code", "web development" ,  "konectia" , "diseño"]
 ---
+
+[Go back ? ..](../../)
 # Primera Publicación
 
 Publicado el: 2024-03-09
